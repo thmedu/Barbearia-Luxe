@@ -1,0 +1,102 @@
+/* Estilos para telas menores que 768px (tablet e abaixo) */
+@media screen and (max-width: 767px) {
+    .content h3 {
+        font-size: 3rem; /* Reduzir tamanho do título para tablets */
+        margin-right: 0; /* Remover margem direita */
+    }
+
+    .content p {
+        font-size: 1.3rem; /* Manter tamanho do texto */
+    }
+
+    .header {
+        padding: 1rem 2rem; /* Reduzir padding no cabeçalho */
+    }
+
+    .navbar a {
+        font-size: 1.3rem; /* Reduzir tamanho dos links no menu */
+    }
+
+    .icons img {
+        margin: 0.3rem; /* Ajustar margem entre ícones */
+    }
+
+    .btn {
+        font-size: 1.4rem; /* Reduzir tamanho do botão */
+        padding: 0.7rem 2rem; /* Reduzir padding do botão */
+    }
+
+    .footer .share img {
+        width: 25px; /* Reduzir tamanho dos ícones de compartilhamento */
+        height: 25px;
+    }
+}
+
+/* Estilos para telas menores que 576px (mobile) */
+@media screen and (max-width: 575px) {
+    .content h3 {
+        font-size: 2.5rem; /* Reduzir tamanho do título ainda mais para dispositivos móveis */
+    }
+
+    .content p {
+        font-size: 1.2rem; /* Reduzir tamanho do texto para melhor legibilidade */
+    }
+
+    .header {
+        padding: 0.8rem 1.5rem; /* Reduzir padding no cabeçalho */
+    }
+
+    .navbar a {
+        font-size: 1.2rem; /* Reduzir tamanho dos links no menu para dispositivos móveis */
+    }
+
+    .icons img {
+        margin: 0.2rem; /* Ajustar margem entre ícones */
+    }
+
+    .btn {
+        font-size: 1.2rem; /* Reduzir tamanho do botão */
+        padding: 0.6rem 1.5rem; /* Reduzir padding do botão */
+    }
+
+    .footer .share img {
+        width: 20px; /* Reduzir tamanho dos ícones de compartilhamento */
+        height: 20px;
+    }
+}
+
+/* Estilos gerais para telas menores que 768px */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Reduzir largura geral do conteúdo */
+    }
+
+    .header .logo img {
+        width: 100px; /* Reduzir tamanho do logo no cabeçalho */
+    }
+
+    .floating-button,
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        line-height: 45px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .header .logo img {
+        width: 100px;
+    }
+
+    .floating-button,
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        line-height: 45px;
+    }
+}

@@ -1,0 +1,767 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7; /* Fundo mais claro */
+    color: #333; /* Cor de texto padrão */
+    margin: 0;
+}
+
+.container {
+    width: 90%; /* Largura ajustada para maior conteúdo */
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: auto;
+    overflow: hidden; /* Evitar overflow horizontal */
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #131313; /* Fundo escuro */
+    color: #dacdc3; /* Texto branco */
+    padding: 0.1rem 0;
+    position: sticky; /* Cabeçalho fixo no topo */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease; /* Transição de cor suave */
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    margin-left: 1rem;
+}
+
+.header .logo img {
+    width: 100px; /* Logo um pouco menor */
+}
+
+.header .navbar a {
+    color: #dacdc3;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease; /* Transição de cor suave */
+}
+
+.header .navbar a:hover {
+    color: #A26E3B; /* Cor do hover */
+}
+
+.header .icons img {
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Efeito de escala suave */
+}
+
+.header .icons img:hover {
+    transform: scale(1.2); /* Escala ao passar o mouse */
+}
+
+/* Home */
+.home {
+    background-image: url('../../img/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #dacdc3;
+    text-align: center;
+    padding: 40vh 0; /* Ajuste o padding conforme necessário */
+}
+
+.home h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.home .btn {
+    display: inline-block;
+    background-color: #A26E3B;
+    color: #131313;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.home .btn:hover {
+    background-color: #131313;
+    color: #dacdc3;
+}
+
+.modal {
+    display: none; /* Inicia oculto */
+    position: fixed; /* Permanece fixo na tela */
+    z-index: 1000; /* Z-index alto para estar acima do restante do conteúdo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    overflow: auto; /* Permite rolagem se o conteúdo for maior que a tela */
+    color: #fff;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #131313;
+    margin: 15% auto; /* Centraliza verticalmente */
+    padding: 20px;
+    border: 1px solid #dacdc3;
+    width: 80%;
+    max-width: 600px; /* Largura máxima do modal */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilização do formulário dentro do modal */
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select,
+button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #dacdc3;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button.btn {
+    background-color: #A26E3B;
+    color:#dacdc3;
+    border: none;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #05bf1e;
+    color: #131313;
+}
+
+/* Seção de Serviços */
+.services {
+    background-color: #dacdc3;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.services .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service {
+    flex: 1 1 300px;
+    background-color: #131313;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #f7f7f7;
+
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+    color:  #f7f7f7;
+    ;
+}
+
+/* Seção de Produtos */
+.products {
+    background-color: #131313;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.products .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f7f7f7;
+
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product {
+    flex: 1 1 300px;
+    background-color: #dacdc3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product p {
+    font-size: 1rem;
+}
+
+/* Seção de Equipe */
+.team {
+    background-color: #dacdc3;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.team .title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.member {
+    flex: 1 1 calc(63.33% - 1rem); /* Utiliza 33.33% do espaço, descontando o gap */
+    background-color: #131313;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #f7f7f7;
+    text-align: center;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+}
+
+.member img {
+    width: 50px; /* Largura fixa para garantir um círculo perfeito */
+    height: 300px; /* Altura fixa para garantir um círculo perfeito */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    border-radius: 100px; /* Transforma a imagem em um círculo */
+    margin-bottom: 1rem; /* Espaço abaixo da imagem */
+}
+
+
+
+.member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.member p {
+    font-size: 1rem;
+}
+
+/* Seção de Avaliações */
+.reviews {
+    background-color: #131313;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.reviews .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review {
+    flex: 1 1 300px;
+    background-color: #dacdc3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-10px);
+}
+
+.review img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.review p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.review h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.stars img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Seção de Contato */
+.contact {
+    background-color: #222;
+    color: #dacdc3;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    display: inline-block;
+    background-color: #A26E3B;
+    color: #dacdc3;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #A26E3B;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #dacdc3;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 4rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Botão Flutuante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 90px; /* Espaço adicional para evitar sobreposição */
+    background-color: #019b09;
+    color: #019b09;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button:hover {
+    background-color: #019b09;
+}
+
+/* Botão Flutuante de Topo */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.floating-button:hover {
+    background-color: #0056b3;
+}
+
+/* Seção de Preços */
+.pricing {
+    background-color: #131313;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.price-table {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.price-card {
+    background-color: #dacdc3;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.price-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.price-card p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.price-card .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fcef00;
+    margin-bottom: 20px;
+}
+
+.price-card .duration {
+    font-size: 1.2rem;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.price-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.price-card ul li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.price-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #dacdc3;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.price-card a:hover {
+    background-color: #555;
+}
+
+
+/* Seção de Equipe */
+.team {
+    background-color: #dacdc3;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.team .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.member {
+    flex: 1 1 300px;
+    background-color: #131313;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+}
+
+.member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.member p {
+    font-size: 1rem;
+}
+
+/* Seção de Avaliações */
+.reviews {
+    background-color: #131313;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.reviews .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review {
+    flex: 1 1 300px;
+    background-color: #dacdc3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-10px);
+}
+
+.review img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.review p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.review h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.stars img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Seção de Contato */
+.contact {
+    background-color: #222;
+    color: #dacdc3;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    display: inline-block;
+    background-color: #A26E3B;
+    color: #dacdc3;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #A26E3B;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #dacdc3;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 4rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}

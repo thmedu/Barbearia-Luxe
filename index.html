@@ -1,297 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
-            rel="stylesheet">
-        <title>Cafeteria</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barbearia Luxe - O melhor lugar para cuidar do seu visual. Conheça nossos serviços, produtos e reserve seu horário.">
+    <meta name="keywords" content="barbearia, corte de cabelo, barba, grooming, barbearia de luxo">
+    <meta name="author" content="Seu Nome ou Nome da Empresa">
+    <link rel="icon" href="./img/logo.png">
+    <title>Barbearia Luxe</title>
+    <link rel="stylesheet" href="./ativos/css/styles.css">
+    <link rel="stylesheet" href="./ativos/css/responsivo.css">
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-RJ1b6t8+q2JW5Pe6BrXbnoCfz8yMpp6P2P/o4W0itNpDhGf5r4wABh44k6diIFmz9lE6H2ROZP/WA+ilqzLZHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-    <body>
-        <!-- Criando o cabeçalho e colocando a imagem da logo -->
-        <header class="header">
-            <section>
-                <a href="#" class="logo">
-                    <img src="./img/logo.png" alt="logo">
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <section>
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="logo da Barbearia Luxe">
+            </a>
+
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#services">Serviços</a>
+                <a href="#products">Produtos</a>
+                <a href="#team">Equipe</a>
+                <a href="#reviews">Avaliações</a>
+                <a href="#contact">Contato</a>
+            </nav>
+
+            <div class="icons">
+                <a href="#" class="icon">
+                    <i class="fas fa-search"></i>
                 </a>
-                <!-- Fim do cabeçalho -->
+                <a href="#" class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </section>
+    </header>
 
-                <!-- Links de navegação -->
-                <nav class="navbar">
-                    <a class="navbar" href="#">Home</a>
-                    <a class="navbar" href="#about">Sobre</a>
-                    <a class="navbar" href="#home">Menu</a>
-                    <a class="navbar" href="#review">Avaliações</a>
-                    <!-- Corrigido: "review" para "Avaliações" -->
-                    <a class="navbar" href="#address">Endereço</a>
-                    <!-- Colocamos um id # para quando for navegar ele vai levar até o id -->
-                </nav>
+    <!-- Conteúdo da página -->
 
-                <div class="icons">
-                    <img width="30" height="30"
-                        src="https://img.icons8.com/pastel-glyph/30/ffffff/search--v2.png"
-                        alt="search--v2" />
-                    <img width="30" height="30"
-                        src="https://img.icons8.com/material-outlined/30/ffffff/shopping-cart--v1.png"
-                        alt="shopping-cart--v1" />
+    <!-- Botão flutuante para scroll top -->
+    <div class="floating-button" onclick="scrollToTop()">
+        &uarr;
+    </div>
 
-                </div>
-            </section>
-        </header>
-        <!-- Fim do cabeçalho -->
+    <!-- Botão flutuante para WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=SEUNUMERO&text=Olá,%20gostaria%20de%20agendar%20um%20horário" class="whatsapp-button" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/FFFFFF/whatsapp.png" />
+    </a>
 
-        <!-- Iniciando o primeiro container -->
-        <div class="home-container">
-            <!-- Seção do primeiro container -->
-            <section id="home">
-                <!-- Seção do conteúdo -->
-                <div class="content">
-                    <h3>O melhor café da região</h3>
-                    <!-- Corrigido: "mlhor" para "melhor" -->
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Quae explicabo dicta similique est cumque
-                        incidunt fugit voluptatibus molestias laboriosam!</p>
-                    <a href="#" class="btn">Peça o seu Agora</a>
-                </div>
-            </section>
+    <!-- Seção Home -->
+    <section id="home" class="home">
+        <div class="content">
+            <h1>Bem-vindo à Barbearia Luxe</h1>
+            <p>Um espaço exclusivo para homens que valorizam seu visual. Venha descobrir a experiência de um serviço premium de barbearia.</p>
+            <a href="#" class="btn">Agende seu Horário</a>
         </div>
+    </section>
 
-        <div> <!-- Sessão Sobre Nós -->
-            <section class="about" id="about">
-                <h2 class="title">Sobre <span>Nós </span></h2>
-                <!-- Sessão do título do container -->
-                <div class="row">
-                    <div class="container-img">
-                        <img src="./img/xicara.jpg" alt="sobre-nos">
-                        <!-- Sessão imagem xícara -->
-                    </div>
+    <!-- Seção Serviços -->
+    <section id="services" class="services">
+        <h2 class="title">Nossos Serviços</h2>
+        <div class="service-container">
+            <div class="service">
+                <img src="./img/services/corte1.jpg" alt="imagem do serviço 1">
+                <h3>Corte de Cabelo</h3>
+                <p>Conheça nossos cortes exclusivos, feitos por profissionais experientes que entendem do seu estilo.</p>
+            </div>
+            <div class="service">
+                <img src="./img/services/barba2.jpg" alt="imagem do serviço 2">
+                <h3>Barba Estilizada</h3>
+                <p>Transforme sua barba com nossos serviços de barbearia, utilizando os melhores produtos para cuidar da sua pele.</p>
+            </div>
+            <div class="service">
+                <img src="./img/services/pele.jpg" alt="imagem do serviço 3">
+                <h3>Cuidados com a Pele</h3>
+                <p>Além de cortes e barba, oferecemos tratamentos para a pele que realçam sua beleza natural.</p>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Sessão Sobre Nós -->
-                    <div class="content">
-                        <!-- Sessão content igual a content acima -->
-                        <h3>O Que deixa nosso café especial</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Rem, consequatur. Quasi quis
-                            repudiandae, voluptates neque facere, ea esse
-                            facilis, recusandae eos repellendus laborum est
-                            voluptas laboriosam perspiciatis eligendi ipsum
-                            molestias.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Rem, consequatur. Quasi quis
-                            repudiandae, voluptates neque facere, ea esse
-                            facilis, recusandae eos repellendus laborum est
-                            voluptas laboriosam perspiciatis eligendi ipsum
-                            molestias.</p>
-                        <a href="#" class="btn">Saiba Mais</a>
-                    </div> <!-- Fim da sessão Sobre Nós -->
+    <!-- Seção Produtos -->
+    <section id="products" class="products">
+        <h2 class="title">Nossos Produtos</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="./img/Produtos/Shampoo.png" alt="imagem do produto 1">
+                <h3>Shampoo para Barba</h3>
+                <p>Um shampoo exclusivo para manter sua barba limpa e bem cuidada todos os dias.</p>
+            </div>
+            <div class="product">
+                <img src="./img/Produtos/Oleo.png" alt="imagem do produto 2">
+                <h3>Óleo Hidratante</h3>
+                <p>Óleo essencial para hidratação profunda da pele, deixando-a suave e livre de irritações.</p>
+            </div>
+            <div class="product">
+                <img src="./img/Produtos/Modelador.png" alt="imagem do produto 3">
+                <h3>Creme Modelador</h3>
+                <p>Creme modelador para cabelos que garante um visual impecável ao longo do dia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Preços -->
+    <section id="pricing" class="pricing">
+        <h2 class="title">Nossos Preços</h2>
+        <div class="price-table">
+            <div class="price-card">
+                <h3>Corte de Cabelo</h3>
+                <p>Corte personalizado por profissionais qualificados.</p>
+                <div class="price">R$ 50,00</div>
+                <div class="duration">por sessão</div>
+                <ul>
+                    <li>Corte moderno</li>
+                    <li>Finalização com produtos de qualidade</li>
+                    <li>Atendimento personalizado</li>
+                </ul>
+                <a href="#" class="btn">Agende Agora</a>
+            </div>
+            <div class="price-card">
+                <h3>Barba Estilizada</h3>
+                <p>Transformação da sua barba com cuidados especiais.</p>
+                <div class="price">R$ 35,00</div>
+                <div class="duration">por sessão</div>
+                <ul>
+                    <li>Barba modelada e estilizada</li>
+                    <li>Tratamento da pele inclusivo</li>
+                    <li>Produtos específicos para barba</li>
+                </ul>
+                <a href="#" class="btn">Agende Agora</a>
+            </div>
+            <div class="price-card">
+                <h3>Cuidados com a Pele</h3>
+                <p>Tratamentos faciais para uma pele saudável.</p>
+                <div class="price">R$ 80,00</div>
+                <div class="duration">por sessão</div>
+                <ul>
+                    <li>Limpeza profunda da pele</li>
+                    <li>Hidratação intensiva</li>
+                    <li>Tratamentos anti-envelhecimento</li>
+                </ul>
+                <a href="#" class="btn">Agende Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Equipe -->
+    <section id="team" class="team">
+        <h2 class="title">Nossa Equipe</h2>
+        <div class="team-container">
+            <div class="member">
+                <img src="./img/equipe/equipe1.jpg" alt="foto do membro da equipe 1">
+                <h3>João Batista</h3>
+                <p>Cabeleireiro e especialista em cortes masculinos.</p>
+            </div>
+            <div class="member">
+                <img src="./img/equipe/equipe3.jpg" alt="foto do membro da equipe 2">
+                <h3>Guilher Oliveira</h3>
+                <p>Barbeiro experiente em barbearia de luxo e tratamentos exclusivos.</p>
+            </div>
+            <div class="member">
+                <img src="./img/equipe/equipe2.jpg" alt="foto do membro da equipe 3">
+                <h3>Fernando Santos</h3>
+                <p>Especialista em cuidados faciais e tratamentos estéticos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Agendamento -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agendamento</h2>
+            <form id="appointment-form">
+                <label for="professional">Selecione o Profissional:</label>
+                <select id="professional" name="professional">
+                    <option value="João Batista">João Batista</option>
+                    <option value="Guilher Oliveira">Guilher Oliveira</option>
+                    <option value="Fernando Santos">Fernando Santos</option>
+                </select>
+
+                <label for="time">Selecione o Horário:</label>
+                <select id="time" name="time">
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                </select>
+
+                <button type="submit" class="btn">Agendar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Seção Avaliações -->
+    <section id="reviews" class="reviews">
+        <h2 class="title">Avaliações de Clientes</h2>
+        <div class="review-container">
+            <div class="review">
+                <img src="./img/avaliação/avaliacao2.jpg" alt="foto do cliente 1">
+                <p>"Serviço impecável, ambiente agradável e profissionais muito competentes. Recomendo!"</p>
+                <h3>Lucas Silva</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-            </section>
-
-            <!--sessão menus-->
-            <section class="menu" id="menu">
-                <h2 class="title">Nosso <span>Menu </span></h2>
-
-                <!--sessão Div para nosso cards / menus-->
-                <div class="box-container">
-                    <div class="box">
-                        <img src="./img/cafe2.png" alt="iten1">
-                        <!--Imagem do produto-->
-                        <h3>Café Espresso</h3> <!--Descrição-->
-                        <div class="price">R$15,90 <span>R$20,99 </span></div>
-                        <!--Valor PREÇO CHEIO E COM DESCONTO-->
-                        <a href="#" class="btn">Adicione ao Carrinho</a>
-                    </div>
-
-                    <div class="box">
-                        <img src="./img/cafe3.png" alt="iten2">
-                        <!--Imagem do produto-->
-                        <h3>Café Latte</h3> <!--Descrição-->
-                        <div class="price">R$18,90 <span>R$24,99 </span></div>
-                        <!--Valor PREÇO CHEIO E COM DESCONTO-->
-                        <a href="#" class="btn">Adicione ao Carrinho</a>
-                    </div>
-
-                    <div class="box">
-                        <img src="./img/cafe4.png" alt="iten3">
-                        <!--Imagem do produto-->
-                        <h3>Café Cappuccino</h3> <!--Descrição-->
-                        <div class="prince">R$20,90 <span>R$28,99 </span></div>
-                        <!--Valor PREÇO CHEIO E COM DESCONTO-->
-                        <a href="#" class="btn">Adicione ao Carrinho</a>
-                    </div>
-
-                    <div class="box">
-                        <img src="./img/cafe5.png" alt="iten4">
-                        <!--Imagem do produto-->
-                        <h3>Café Mocha</h3> <!--Descrição-->
-                        <div class="price">R$25,90 <span>R$30,99 </span></div>
-                        <!--Valor PREÇO CHEIO E COM DESCONTO-->
-                        <a href="#" class="btn">Adicione ao Carrinho</a>
-                    </div>
-
-                    <div class="box">
-                        <img src="./img/cafe6.png" alt="iten5">
-                        <!--Imagem do produto-->
-                        <h3>Café Americano</h3> <!--Descrição-->
-                        <div class="prince">R$12,90 <span>R$19,99 </span></div>
-                        <!--Valor PREÇO CHEIO E COM DESCONTO-->
-                        <a href="#" class="btn">Adicione ao Carrinho</a>
-                    </div>
-
-                    <div class="box">
-                        <img src="./img/cafe1.png" alt="iten6">
-                        <!--Imagem do produto-->
-                        <h3>Café Descafeinado</h3> <!--Descrição-->
-                        <div class="price">R$29,90 <span>R$35,99 </span></div>
-                        <!--Valor PREÇO CHEIO E COM DESCONTO-->
-                        <a href="#" class="btn">Adicione ao Carrinho</a>
-                    </div>
+            </div>
+            <div class="review">
+                <img src="./img/avaliação/avaliacao1.jpg" alt="foto do cliente 2">
+                <p>"Melhor barbearia da cidade! Atendimento excelente e produtos de alta qualidade."</p>
+                <h3>Patrícia Souza</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-
-            </section>
-            <section class="review" id="review">
-                <h2 class="title">Nossos <span>Clientes </span></h2>
-                <div class="box-container">
-
-                    <div class="box">
-                        <img src="./img/aspas.png" alt="comentario">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Natus quam laboriosam fuga enim
-                            obcaecati, quas quidem vero, quae non ipsum
-                            asperiores eaque odit quaerat, eum blanditiis.
-                            Impedit, odio excepturi! Nobis!</p>
-                        <img src="./img/cliente1.png" alt="cliente1"
-                            class="user">
-
-                        <h3>Julio Chaves</h3>
-                        <div class="stars">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                        </div>
-                    </div>
-
-                    <div class="box">
-                        <img src="./img/aspas.png" alt="comentario">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Natus quam laboriosam fuga enim
-                            obcaecati, quas quidem vero, quae non ipsum
-                            asperiores eaque odit quaerat, eum blanditiis.
-                            Impedit, odio excepturi! Nobis!</p>
-                        <img src="./img/cliente2.png" alt="cliente2"
-                            class="user">
-                        <h3>Junia Barreto</h3>
-                        <div class="stars">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                        </div>
-                    </div>
-
-                    <div class="box">
-                        <img src="./img/aspas.png" alt="comentario">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Natus quam laboriosam fuga enim
-                            obcaecati, quas quidem vero, quae non ipsum
-                            asperiores eaque odit quaerat, eum blanditiis.
-                            Impedit, odio excepturi! Nobis!</p>
-                        <img src="./img/cliente3.png" alt="cliente3"
-                            class="user">
-                        <h3>Carlos Fernandes</h3>
-                        <div class="stars">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                            <img
-                                src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png"
-                                alt="star--v2"
-                                style="width: 30px; height: 30px;">
-                        </div>
-                    </div>
+            </div>
+            <div class="review">
+                <img src="./img/avaliação/avaliacao3.jpg" alt="foto do cliente 3">
+                <p>"Estou sempre satisfeito com o serviço da Barbearia Luxe. Recomendo a todos os meus amigos."</p>
+                <h3>Marcos Oliveira</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-            <!-- Sessão de endereço -->
-            <section class="address" id="address">
-                <h2 class="title">Nosso <span>Endereço </span></h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58519.9711140389!2d-46.75502065136721!3d-23.550544299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5757726ddc09%3A0x39ec20e62e868b26!2sThe%20Coffee!5e0!3m2!1spt-BR!2sbr!4v1712088182816!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </section>
+    <!-- Seção Contato -->
+    <section id="contact" class="contact">
+        <h2 class="title">Entre em Contato</h2>
+        <form action="#" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+    </section>
 
-            <!-- Rodapé -->
-            <section class="footer">
-                <div class="share">
-                    <img width="30" height="30"
-                        src="https://img.icons8.com/ios/30/ffffff/instagram-new--v1.png"
-                        alt="instagram-new--v1" />
-                    <img width="30" height="30"
-                        src="https://img.icons8.com/ios/30/ffffff/facebook-new.png"
-                        alt="facebook-new" />
-                    <img width="30" height="30"
-                        src="https://img.icons8.com/ios/30/ffffff/whatsapp--v1.png"
-                        alt="whatsapp--v1" />
-                    <img width="30" height="30"
-                        src="https://img.icons8.com/ios/30/ffffff/twitterx--v2.png"
-                        alt="twitterx--v2" />
-                </div>
-            </section>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Barbearia Luxe. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
 
-        </body>
+    <script src="./ativos/js/script.js"></script>
+</body>
 
-    </html>
+</html>
