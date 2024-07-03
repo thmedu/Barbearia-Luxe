@@ -1,57 +1,63 @@
-/* Estilos para telas menores que 768px (tablet e abaixo) */
-@media screen and (max-width: 767px) {
-    .content h3 {
-        font-size: 3rem; /* Reduzir tamanho do título para tablets */
-        margin-right: 0; /* Remover margem direita */
-    }
-
-    .content p {
-        font-size: 1.3rem; /* Manter tamanho do texto */
-    }
-
+/* Estilos para telas menores que 576px (mobile) */
+@media screen and (max-width: 575px) {
     .header {
-        padding: 1rem 2rem; /* Reduzir padding no cabeçalho */
+        padding: 0.8rem 1rem; /* Reduzir padding no cabeçalho para telas pequenas */
     }
 
-    .navbar a {
-        font-size: 1.3rem; /* Reduzir tamanho dos links no menu */
+    .header .logo img {
+        width: 80px; /* Reduzir tamanho do logo no cabeçalho */
     }
 
-    .icons img {
-        margin: 0.3rem; /* Ajustar margem entre ícones */
+    .header .navbar {
+        flex-direction: column; /* Alterar para layout de coluna em telas muito pequenas */
+        align-items: center; /* Centralizar verticalmente os itens */
     }
 
-    .btn {
-        font-size: 1.4rem; /* Reduzir tamanho do botão */
-        padding: 0.7rem 2rem; /* Reduzir padding do botão */
+    .header .navbar a {
+        margin: 0.3rem; /* Espaçamento menor entre os itens do menu */
     }
 
-    .footer .share img {
-        width: 25px; /* Reduzir tamanho dos ícones de compartilhamento */
-        height: 25px;
+    .header .icons {
+        margin-top: 1rem; /* Espaçamento entre o menu e os ícones */
     }
 }
 
-/* Estilos para telas menores que 576px (mobile) */
-@media screen and (max-width: 575px) {
+/* Estilos para telas entre 576px e 767px (tablet portrait) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .header {
+        padding: 1rem 1.5rem; /* Ajuste de padding no cabeçalho para telas menores */
+    }
+
+    .header .navbar {
+        flex-direction: column; /* Mudar para layout de coluna para o menu */
+        align-items: center;
+        text-align: center;
+    }
+
+    .header .navbar a {
+        margin: 10px 0;
+        font-size: 1.2rem; /* Reduzir tamanho dos links no menu */
+    }
+
+    .header .navbar .logo {
+        order: -1; /* Colocar o logo no topo do menu */
+        margin-bottom: 20px;
+    }
+
+    .floating-button,
+    .whatsapp-button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+
     .content h3 {
-        font-size: 2.5rem; /* Reduzir tamanho do título ainda mais para dispositivos móveis */
+        font-size: 2.5rem; /* Reduzir tamanho do título para dispositivos móveis */
     }
 
     .content p {
         font-size: 1.2rem; /* Reduzir tamanho do texto para melhor legibilidade */
-    }
-
-    .header {
-        padding: 0.8rem 1.5rem; /* Reduzir padding no cabeçalho */
-    }
-
-    .navbar a {
-        font-size: 1.2rem; /* Reduzir tamanho dos links no menu para dispositivos móveis */
-    }
-
-    .icons img {
-        margin: 0.2rem; /* Ajustar margem entre ícones */
     }
 
     .btn {
@@ -65,8 +71,8 @@
     }
 }
 
-/* Estilos gerais para telas menores que 768px */
-@media (max-width: 768px) {
+/* Estilos para telas entre 768px e 991px (tablet landscape) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .container {
         width: 90%; /* Reduzir largura geral do conteúdo */
     }
@@ -82,21 +88,90 @@
         font-size: 20px;
         line-height: 45px;
     }
+
+    .price-table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .price-card {
+        width: 45%;
+        margin: 20px;
+    }
+
+    .price-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .price-card .price {
+        font-size: 1.5rem;
+    }
+
+    .price-card .duration {
+        font-size: 1rem;
+    }
+
+    .price-card ul {
+        font-size: 0.9rem;
+    }
 }
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
+
+/* Estilos para telas entre 992px e 1199px (desktop) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Aqui você pode adicionar estilos para telas maiores que 991px e menores que 1200px, se necessário */
+}
+
+/* Estilos para telas maiores ou iguais a 1200px */
+@media screen and (min-width: 1200px) {
+    /* Aqui você pode adicionar estilos específicos para telas grandes, com larguras de 1200px ou mais */
+}
+
+/* Ajustes adicionais para telas grandes */
+@media screen and (max-width: 1200px) {
+    .price-table {
+        gap: 20px; /* Reduzir o espaçamento entre os cards */
+    }
+}
+
+/* Ajustes adicionais para tablets e abaixo */
+@media screen and (max-width: 991px) {
+    .price-card {
+        max-width: 100%; /* Cards de preço ocupam largura total */
+    }
+}
+
+/* Ajustes adicionais para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    .price-table {
+        flex-direction: column; /* Alterar para layout de coluna em telas menores */
+        align-items: center;
     }
 
-    .header .logo img {
-        width: 100px;
+    .price-card {
+        margin-bottom: 20px; /* Espaçamento entre os cards */
+    }
+}
+
+/* Ajustes adicionais para telas menores que 576px */
+@media screen and (max-width: 576px) {
+    .pricing h2 {
+        font-size: 2rem; /* Reduzir tamanho do título para telas menores */
     }
 
-    .floating-button,
-    .whatsapp-button {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-        line-height: 45px;
+    .price-card h3 {
+        font-size: 1.8rem; /* Reduzir tamanho do título do card para telas menores */
+    }
+
+    .price-card p {
+        font-size: 1rem; /* Reduzir tamanho do texto para telas menores */
+    }
+
+    .price-card .price {
+        font-size: 2rem; /* Ajustar tamanho do preço para telas menores */
+    }
+
+    .price-card .duration {
+        font-size: 1rem; /* Ajustar tamanho da duração para telas menores */
     }
 }
