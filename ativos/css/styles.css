@@ -93,16 +93,15 @@ body {
 
 /* Estilo do menu hamburguer */
 .menu-toggle {
-    display: none; /* Inicialmente oculto em telas maiores */
-    color: #efefef; /* Cor do ícone */
-    font-size: 24px; /* Tamanho do ícone */
-    cursor: pointer; /* Cursor ao passar o mouse */
+    display: none;
+    color: #efefef;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .menu-toggle:hover {
     color: #5b3124; /* Cor do ícone ao passar o mouse */
 }
-
 
 /* Menu móvel */
 .mobile-menu {
@@ -144,6 +143,8 @@ body {
 .mobile-menu.active {
     display: block;
 }
+
+/* Outros estilos relevantes para o site */
 
 /* Home */
 .home {
@@ -276,10 +277,11 @@ button.btn:hover {
     max-width: 600px; /* Largura máxima do calendário */
     margin: 20px auto; /* Centraliza o calendário na página */
     padding: 20px;
-    background-color: #ffffff; /* Cor de fundo do calendário */
+    background-color: #000; /* Cor de fundo do calendário */
     border: 1px solid #ddd; /* Borda do calendário */
     border-radius: 8px; /* Cantos arredondados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra do calendário */
+    color: #FFF;
 }
 
 /* Estilos para os dias do calendário */
@@ -304,13 +306,6 @@ button.btn:hover {
     color: #ffd700; /* Cor amarela da estrela */
     font-size: 24px; /* Tamanho do ícone */
 }
-.fa-bars:before {
-    content: "\f0c9";
-    color: #efefef;
-}
-
-
-
 
 /* Seção de Serviços */
 .services {
@@ -980,7 +975,7 @@ button.btn:hover {
 }
 
 .social-icons a {
-    margin: 0 0.5rem;
+    margin: 0 2rem;
 }
 
 .social-icons img {

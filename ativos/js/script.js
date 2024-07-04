@@ -90,28 +90,30 @@ document.addEventListener('DOMContentLoaded', function() {
     whatsappButton.setAttribute('target', '_blank');
     whatsappButton.setAttribute('rel', 'noopener noreferrer');
     
-    // Selecionar elementos do DOM para o menu hamburguer
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const closeMenu = document.querySelector('.close');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Selecionar o botão hamburguer
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
     
-    // Abrir menu hamburguer ao clicar no ícone
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.add('active');
-    });
+        // Evento de clique no botão hamburguer
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+        });
     
-    // Fechar menu hamburguer ao clicar no botão de fechar
-    closeMenu.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-    });
-    
-    // Fechar menu hamburguer ao clicar em um link dentro do menu
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
+        // Fechar o menu mobile ao clicar no ícone de fechar (×)
+        const closeMenu = document.getElementById('close');
+        closeMenu.addEventListener('click', function() {
             mobileMenu.classList.remove('active');
         });
+    
+        // Fechar o menu mobile ao clicar em qualquer parte fora dele
+        window.addEventListener('click', function(event) {
+            if (event.target !== menuToggle && event.target !== mobileMenu && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
     });
-});
+    
 
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -160,13 +162,5 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Ocorreu um erro ao agendar. Por favor, tente novamente.');
         });
     });
-
-// Seleciona o ícone do menu hamburguer e o menu mobile
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-
-// Adiciona um evento de clique ao ícone do menu hamburguer
-menuToggle.addEventListener('click', function() {
-    // Alterna a classe 'active' no menu hamburguer
-    mobileMenu.classList.toggle('active');
-});
+ 
+    
