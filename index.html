@@ -4,43 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Barbearia Luxe - O melhor lugar para cuidar do seu visual. Conheça nossos serviços, produtos e reserve seu horário.">
+    <meta name="description"
+        content="Barbearia Luxe - O melhor lugar para cuidar do seu visual. Conheça nossos serviços, produtos e reserve seu horário.">
     <meta name="keywords" content="barbearia, corte de cabelo, barba, grooming, barbearia de luxo">
     <meta name="author" content="Seu Nome ou Nome da Empresa">
     <link rel="icon" href="./img/logo1.png">
     <title>Barbearia Luxe</title>
     <link rel="stylesheet" href="./ativos/css/styles.css">
     <link rel="stylesheet" href="./ativos/css/responsivo.css">
+    <!-- Incluir arquivos CSS do FullCalendar -->
+    <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.min.css" rel="stylesheet" />
+
+    <!-- Incluir arquivos JavaScript do FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.min.js"></script>
     <!-- Font Awesome (ícones) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-RJ1b6t8+q2JW5Pe6BrXbnoCfz8yMpp6P2P/o4W0itNpDhGf5r4wABh44k6diIFmz9lE6H2ROZP/WA+ilqzLZHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
+
 </head>
 
 <body>
     <!-- Cabeçalho -->
     <header class="header">
-        <section>
-            <a href="#" class="logo">
+        <div class="container">
+            <a href="#home" class="logo">
                 <img src="./img/logo1.png" alt="logo da Barbearia Luxe">
             </a>
 
-            <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="#services">Serviços</a>
-                <a href="#products">Produtos</a>
-                <a href="#team">Equipe</a>
-                <a href="#reviews">Avaliações</a>
-                <a href="#contact">Contato</a>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#home"></a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#team">Equipe</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#reviews">Avaliações</a></li>
+                    <li><a href="#pricing">Agendamento</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#map" class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                    <a href="#contact" class="icon">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                </div>
             </nav>
 
-            <div class="icons">
-                <a href="#" class="icon">
-                    <i class="fas fa-search"></i>
-                </a>
-                <a href="#" class="icon">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
+
+
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
-        </section>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#team">Equipe</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="#reviews">Avaliações</a></li>
+                <li><a href="#pricing">Agendamento</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Conteúdo da página -->
@@ -51,16 +81,18 @@
     </div>
 
     <!-- Botão flutuante para WhatsApp -->
-    <a href="https://api.whatsapp.com/send?phone=SEUNUMERO&text=Olá,%20gostaria%20de%20agendar%20um%20horário" class="whatsapp-button" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/FFFFFF/whatsapp.png" alt="Ícone do WhatsApp" />
+    <a href="https://api.whatsapp.com/send?phone=SEUNUMERO&text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+        class="whatsapp-button" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/09b700/whatsapp.png" alt="Ícone do WhatsApp" />
     </a>
 
     <!-- Seção Home -->
     <section id="home" class="home">
         <div class="content">
             <h1>Bem-vindo à Barbearia Luxe</h1>
-            <p>Um espaço exclusivo para homens que valorizam seu visual. Venha descobrir a experiência de um serviço premium de barbearia.</p>
-            <a href="#" class="btn">Agende seu Horário</a>
+            <p>Um espaço exclusivo para homens que valorizam seu visual. Venha descobrir a experiência de um serviço
+                premium de barbearia.</p>
+            <a href="#pricing" class="btn">Agende seu Horário</a>
         </div>
     </section>
 
@@ -71,20 +103,24 @@
             <div class="service">
                 <img src="./img/services/corte1.jpg" alt="imagem do serviço 1">
                 <h3>Corte de Cabelo</h3>
-                <p>Conheça nossos cortes exclusivos, feitos por profissionais experientes que entendem do seu estilo.</p>
+                <p>Conheça nossos cortes exclusivos, feitos por profissionais experientes que entendem do seu estilo.
+                </p>
             </div>
             <div class="service">
                 <img src="./img/services/barba2.jpg" alt="imagem do serviço 2">
                 <h3>Barba Estilizada</h3>
-                <p>Transforme sua barba com nossos serviços de barbearia, utilizando os melhores produtos para cuidar da sua pele.</p>
+                <p>Transforme sua barba com nossos serviços de barbearia, utilizando os melhores produtos para cuidar da
+                    sua pele.</p>
             </div>
             <div class="service">
                 <img src="./img/services/pele.jpg" alt="imagem do serviço 3">
                 <h3>Cuidados com a Pele</h3>
                 <p>Além de cortes e barba, oferecemos tratamentos para a pele que realçam sua beleza natural.</p>
             </div>
+            <!-- Novo serviço adicionado -->
         </div>
     </section>
+
 
     <!-- Seção Produtos -->
     <section id="products" class="products">
@@ -158,17 +194,17 @@
         <h2 class="title">Nossa Equipe</h2>
         <div class="team-container">
             <div class="member">
-                <img src="./img/equipe/equipe1.jpg" alt="foto do membro da equipe 1">
+                <img src="./img/equipe/equipe1.jpeg" alt="foto do membro da equipe 1">
                 <h3>João Batista</h3>
                 <p>Cabeleireiro e especialista em cortes masculinos.</p>
             </div>
             <div class="member">
-                <img src="./img/equipe/equipe3.jpg" alt="foto do membro da equipe 2">
+                <img src="./img/equipe/equipe2.jpeg" alt="foto do membro da equipe 2">
                 <h3>Guilher Oliveira</h3>
                 <p>Barbeiro experiente em barbearia de luxo e tratamentos exclusivos.</p>
             </div>
             <div class="member">
-                <img src="./img/equipe/equipe2.jpg" alt="foto do membro da equipe 3">
+                <img src="./img/equipe/equipe3.jpeg" alt="foto do membro da equipe 3">
                 <h3>Fernando Santos</h3>
                 <p>Especialista em cuidados faciais e tratamentos estéticos.</p>
             </div>
@@ -197,6 +233,10 @@
                     <option value="15:00">15:00</option>
                     <option value="16:00">16:00</option>
                 </select>
+
+                <label for="date">Selecione a Data:</label>
+                <div id="calendar"></div>
+
 
                 <button type="submit" class="btn">Agendar</button>
             </form>
@@ -246,6 +286,21 @@
         </div>
     </section>
 
+    <section id="map" class="map">
+        <div class="container">
+            <h2>Localização</h2>
+            <div class="map-container">
+                <!-- Código de incorporação do Google Maps -->
+                <div class="responsive-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.7657867803074!2d-122.42289148464903!3d37.76784475025011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f80d88b124d9f%3A0xa046192ce79d6a6b!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1594763499200!5m2!1sen!2sus"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Seção Contato -->
     <section id="contact" class="contact">
         <h2 class="title">Entre em Contato</h2>
@@ -258,16 +313,20 @@
     </section>
 
     <!-- Rodapé -->
-    <footer class="footer">
+    <<footer class="footer">
         <p>&copy; 2024 Barbearia Luxe. Todos os direitos reservados. </> Thomas Nascimento.</p>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-    </footer>
+        </footer>
 
-    <script src="./ativos/js/script.js"></script>
+        <script src="./ativos/js/script.js"></script>
+        <!-- Adicione o SDK do Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js"></script>
+
 </body>
 
 </html>
