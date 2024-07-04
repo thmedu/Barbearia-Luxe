@@ -1,13 +1,13 @@
-# Projeto Cafeteria ☕
+# Barbearia Luxe
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/seu-usuario/devclub-cafeteria)
 ![GitHub license](https://img.shields.io/github/license/seu-usuario/devclub-cafeteria)
 ![GitHub stars](https://img.shields.io/github/stars/seu-usuario/devclub-cafeteria?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/seu-usuario/devclub-cafeteria?style=social)
 
-Este é um projeto simples desenvolvido pelo DevClub, consistindo em um template para uma cafeteria. O projeto utiliza HTML e CSS para criar uma página web básica para uma cafeteria, com recursos como animação no menu, cabeçalho fixo, estrelas de avaliações, endereço e um mapa.
+O projeto da Barbearia Luxe visa aprimorar o atendimento ao cliente, apresentar serviços oferecidos e permitir agendamentos através de uma API e WhatsApp, além de contar com um formulário de contato integrado.
 
-![Post minimalista marketing digital roxo branco e azul (2)](https://github.com/thmedu/Coffee-shop/assets/141462806/d02cb6de-8169-40e9-9cd0-99f5a1d7fda6)
+![Post minimalista marketing digital roxo branco e azul (4)](https://github.com/thmedu/Barbearia-Luxe/assets/141462806/3b523a34-9cee-4dca-b62c-27a01970c341)
 
 ## Conteúdo
 
@@ -20,18 +20,20 @@ Este é um projeto simples desenvolvido pelo DevClub, consistindo em um template
 
 ## Visão Geral
 
-O template da cafeteria oferece uma estrutura simples para apresentar informações importantes sobre a cafeteria, como menu, avaliações de clientes, endereço e localização no mapa. Além disso, possui um cabeçalho fixo que permite uma navegação fácil, mesmo ao rolar pela página.
+O projeto da Barbearia Luxe oferece uma plataforma para melhorar a experiência do cliente ao agendar serviços de barbearia. Ele inclui uma interface intuitiva para visualização dos serviços disponíveis, informações de contato e integração com WhatsApp para facilitar o agendamento.
 
 ## Tecnologias Utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+- ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ## Como Usar
 
-Para utilizar o template da cafeteria, siga as etapas abaixo:
+Para utilizar o projeto da Barbearia Luxe, siga as etapas abaixo:
 
 1. Clone este repositório para o seu computador:
 
@@ -43,7 +45,7 @@ Para utilizar o template da cafeteria, siga as etapas abaixo:
 
 ## Exemplo
 
-Uma demonstração do template da cafeteria pode ser encontrada [aqui](#).
+Uma demonstração do projeto pode ser acessada [aqui](#) (insira o link para a demonstração).
 
 ## Contribuição
 
