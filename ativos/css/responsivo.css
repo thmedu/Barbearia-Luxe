@@ -182,7 +182,7 @@
 @media screen and (min-width: 768px) {
     .header .navbar {
         display: flex; /* Exibir menu principal */
-        justify-content: space-between; /* Espaço entre os itens do menu */
+        justify-content: center;
         align-items: center; /* Centralizar verticalmente os itens */
     }
 
